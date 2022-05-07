@@ -16,8 +16,7 @@
             android:name=".UserActivity"
             android:exported="false" />
         <activity
-
-            android:name=".Conscent"
+            android:name=".ConscentActivity"
             android:exported="false" />
         <activity
             android:name=".SwipeActivity"
