@@ -1,4 +1,4 @@
-package com.example.aale.activities;
+package com.example.aale;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,18 +13,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.aale.ForgotPassword;
-import com.example.aale.Home;
-import com.example.aale.R;
-import com.example.aale.RegisterUser;
-import com.example.aale.UserActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+class SignInUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register,forgotPassword;
 
@@ -63,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.register:
-                startActivity(new Intent(com.example.aale.activities.LoginActivity.this, RegisterActivity.class));
+                startActivity(new Intent(SignInUser.this,RegisterUser.class));
                 break;
 
             case R.id.signIn:
@@ -71,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.forgotPassword:
-                startActivity(new Intent(com.example.aale.activities.LoginActivity.this, ForgotPassword.class));
+                startActivity(new Intent(SignInUser.this,ForgotPassword.class));
                 break;
         }
     }
@@ -113,15 +108,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                     if(user.isEmailVerified()){
-                        startActivity(new Intent(com.example.aale.activities.LoginActivity.this, UserActivity.class));
+                        startActivity(new Intent(SignInUser.this,Home.class));
                     }else{
                         user.sendEmailVerification();
-                        Toast.makeText(com.example.aale.activities.LoginActivity.this,"Check your Email and verify it",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignInUser.this,"Check your Email and verify it",Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                     }
 
                 }else{
-                    Toast.makeText(com.example.aale.activities.LoginActivity.this,"Failed to login! Please Check your credentials",Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignInUser.this,"Failed to login! Please Check your credentials",Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                 }
             }

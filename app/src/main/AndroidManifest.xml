@@ -16,20 +16,30 @@
             android:name=".UserActivity"
             android:exported="false" />
         <activity
-            android:name=".ConscentActivity"
+            android:name=".Conscent"
             android:exported="false" />
-        <activity
-            android:name=".SwipeActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".SwipeActivity"-->
+<!--            android:exported="false" />-->
    
         <activity
             android:name=".activities.RegisterActivity"
-            android:exported="false"
-            android:label="@string/title_activity_register" />
+            android:exported="true" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
-            android:exported="true"
-            android:label="@string/title_activity_login">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

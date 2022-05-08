@@ -1,4 +1,4 @@
-package com.example.aale.activities;
+package com.example.aale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,16 +15,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.aale.R;
-import com.example.aale.activities.LoginActivity;
-import com.example.aale.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView banner;
     private Button registerUser;
@@ -79,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.banner:
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this,SignInUser.class));
                 break;
             case R.id.registerUser:
                 registerUser();
@@ -161,16 +158,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(RegisterActivity.this,"User has been registered Successfully",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(RegisterUser.this,"User has been registered Successfully",Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }else{
-                                        Toast.makeText(RegisterActivity.this,"Failed to register, Try again",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(RegisterUser.this,"Failed to register, Try again",Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
                             });
                         }else{
-                            Toast.makeText(RegisterActivity.this,"Failed to register",Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterUser.this,"Failed to register",Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
