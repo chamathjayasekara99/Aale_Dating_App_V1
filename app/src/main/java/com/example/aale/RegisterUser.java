@@ -102,7 +102,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         }
 
         if(age.isEmpty()){
-            editTextAge.setError("Birthday is required");
+            editTextAge.setError("Age filed is required");
             editTextAge.requestFocus();
             return;
         }
