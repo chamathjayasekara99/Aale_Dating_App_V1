@@ -1,4 +1,4 @@
-package com.example.chatty.firebase;
+package com.example.aale.firebase;
 
 //import android.util.Log;
 

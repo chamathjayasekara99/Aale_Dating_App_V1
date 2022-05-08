@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.chatty.databinding.ItemContainerReceivedMessageBinding;
-import com.example.chatty.databinding.ItemContainerSentMessageBinding;
-import com.example.chatty.models.ChatMessage;
+import com.example.aale.databinding.ItemContainerReceivedMessageBinding;
+import com.example.aale.databinding.ItemContainerSentMessageBinding;
+import com.example.aale.model.ChatMessage;
 
 import java.util.List;
 
