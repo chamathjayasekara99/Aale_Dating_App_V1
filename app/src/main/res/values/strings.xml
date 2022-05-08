@@ -75,8 +75,7 @@
     <string name="text04">txt4</string>
     <string name="agreebtn">agree</string>
     <string name="backbtn">back</string>
-    <string name="User_logout">Log Out</string>
-    <string name="user_profile">User Profile Activity</string>
+    
 
     <string-array name="genders">
         <item>Male</item>
