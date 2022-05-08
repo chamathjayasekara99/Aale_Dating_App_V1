@@ -123,5 +123,6 @@
     <string name="col5_actions">Action</string>
     <string name="ad_send_all1">Send to All</string>
     <string name="add_new_ad">Add New Add</string>
-	
+    <string name="speaka_ble">speaka_ble</string>
+
 </resources>
